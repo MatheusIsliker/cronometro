@@ -1,25 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+        teste:  'legal',
+        liberaMensagem: false
+    }
+    
+  }
+
+  componentDidMount() {
+    debugger
+    const state = this.state;
+    state.liberaMensagem = true;
+    this.setState(state)
+  }
+
+  render() {
+    return (
+      <div >
+        <h1>{this.state.teste}</h1>
+        <h2>{this.state.liberaMensagem ? 'Olá bora criar este cronometro'
+        : 'Deu errado'}</h2>
+      </div>
+    );
+  }
 }
 
 export default App;
