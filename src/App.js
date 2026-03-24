@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
-import React, { Component } from "react";
-
-
-
-class App extends Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-        teste:  'legal',
-        liberaMensagem: false
-    }
-    
-  }
-
-  componentDidMount() {
-    debugger
-    const state = this.state;
-    state.liberaMensagem = true;
-    this.setState(state)
-  }
-
-  render() {
-    return (
-      <div >
-        <h1>{this.state.teste}</h1>
-        <h2>{this.state.liberaMensagem ? 'Olá bora criar este cronometro'
-        : 'Deu errado'}</h2>
-      </div>
-    );
-  }
-=======
 import React, { Component } from "react";
 import "./estilo.css"
 
@@ -65,18 +30,19 @@ class App extends Component {
                 this.setState(state)
             }, 100);
             state.titleButton = "PAUSAR"
+            
         }
 
         this.setState(state)
     }
 
-    
+
     limpar() {
 
         if (this.timer !== null) {
             clearInterval(this.timer);
             this.timer = null;
-        } 
+        }
 
         let state = this.state;
         state.numero = 0;
@@ -109,7 +75,6 @@ class App extends Component {
             </div>
         )
     }
->>>>>>> master
 }
 
 export default App;
