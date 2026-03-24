@@ -1,0 +1,51 @@
+.container{
+   display: flex;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+
+.title{
+    margin: 0px;
+    background-color: red;
+    color: black;
+    font-family: system-ui;
+    border-radius: 7px;
+}
+
+.img {
+    width: 350px;
+    height: 350px;
+    padding-top: 100px;
+}
+
+.timer {
+    font-size: 130px;
+    margin-top: -250px;
+}
+
+.areaBtn {
+    margin-top: 100px;
+    display: flex;
+}
+
+.botao {
+    width: 150px;
+    font-size: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.botao:hover {
+    opacity: 0.9;
+    background-color: yellow;
+    color: blue;
+    transition: all 0.50s;
+}
